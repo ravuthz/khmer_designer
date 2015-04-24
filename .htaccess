@@ -1,0 +1,9 @@
+#Allow mutiple access
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /khmer_designer/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
